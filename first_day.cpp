@@ -95,8 +95,35 @@ int main()
 		cout << i.first << " " << i.second << nline;
 	}
 
+    //something interesting
+    map<int, set<int>> mp;  
+    mp[5].push_back(6);
 
+    map<int, set<int>> mp;
+    mp[6].insert(10);
 
+    //**STL Binaray Search
+	std::vector<int> v = {1, 3, 6, 7, 27, 56, 63, 100};
+	cout << binary_search(v.begin(), v.end(), 5) << nline;//searching for 5 in that vector
+
+	//lower bound
+
+	//**LB : First value >= Target**
+	//**UB : First value > Target**
+
+	//example of LB
+	cout << *lower_bound(v.begin(), v.end(), 27) << nline;
+	cout << *lower_bound(v.begin(), v.end(), 56) << nline;
+
+	//example of UB
+	cout << *upper_bound(v.begin(), v.end(), 3) << nline;
+	cout << *upper_bound(v.begin(), v.end(), 7) << nline;
+
+	//finding indexes
+	cout << upper_bound(v.begin(), v.end(), 3) - v.begin() << nline;
+	cout << upper_bound(v.begin(), v.end(), 7) - v.begin() << nline;
+
+    //LB-- & UB--
 
 	return 0;
 }
