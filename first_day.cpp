@@ -21,11 +21,12 @@ int main()
 #endif
 	FAST;
 
+	//**pair
 	pair<int, int> p1 = {1, 2}, p2 = {3, 4};
 	cout << p1.first << " " << p1.second << nline;
 	cout << (p1 < p2) << nline;
 
-	//vector of pair
+	//**vector of pair
 	std::vector<pair<int, int>> v = {
 		{1, 2},
 		{3, 4},
@@ -56,6 +57,25 @@ int main()
 	for (auto a : v) {
 		cout << a << " ";
 	}
+
+	//**sets
+	//for search, remove, insert the time complexity O(logN)
+	set<int>a = {2, 5, 85, 1, 56, 20};
+
+	a.insert(10);
+	a.insert(1);
+	a.insert(30);
+	a.insert(30);
+	a.insert(100);
+	a.insert(100);
+
+	a.erase(100);
+
+	for (auto x : a) {
+		cout << x << nline;
+	}
+
+
 
 	return 0;
 }
