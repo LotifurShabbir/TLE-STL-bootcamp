@@ -75,6 +75,27 @@ int main()
 		cout << x << nline;
 	}
 
+	//**map
+	//for search, remove, insert the time complexity O(logN)
+
+	std::map<int, string> map; //can be string string and so on
+	map[4] = "shabbir";
+	map[7] = "Lotifur";
+	cout << map[7] << nline;
+	map[1000] = "Bracu";
+
+
+	//map stores values in pairs
+	for (auto [key, value] : map) {
+		cout << key << " " << value << nline;
+	} //structured bindings
+
+	// < cpp17
+	for (auto i : map) {
+		cout << i.first << " " << i.second << nline;
+	}
+
+
 
 
 	return 0;
